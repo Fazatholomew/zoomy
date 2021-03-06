@@ -1,7 +1,7 @@
 var url = 'https://zoomy.jimmyganteng.com/';
 const move = async (direction) => {
   const sensitivity = document.getElementById('sensitivity').value;
-  fetch(`${url}${direction}?sensitivity=${sensitivity}`);
+  fetch(`${url}move/${direction}?sensitivity=${sensitivity}`);
 };
 
 const speak = async () => {
