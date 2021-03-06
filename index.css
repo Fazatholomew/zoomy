@@ -1,0 +1,111 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #60646D;
+  color: white;
+  font-family:'Montserrat', sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1em;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid #2C82C9;
+  margin: 1em;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  margin: 1em;
+  border-top: 60px solid #2C82C9;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  margin: 1em;
+  border-left: 60px solid #2C82C9;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent; 
+  margin: 1em;
+  border-right: 60px solid #2C82C9; 
+}
+
+.arrow-left:hover {
+  color: #001F3F;
+  border-right: 60px solid #fff;
+  cursor: pointer;
+}
+
+.arrow-right:hover {
+  color: #001F3F;
+  border-left: 60px solid #fff;
+  cursor: pointer;
+}
+
+.arrow-down:hover {
+  color: #001F3F;
+  border-top: 60px solid #fff;
+  cursor: pointer;
+}
+
+.arrow-up:hover {
+  color: #001F3F;
+  border-bottom: 60px solid #fff;
+  cursor: pointer;
+}
+
+.speak {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color : transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+
+.speak:hover {
+  color: #001F3F;
+  background-color: #fff;
+}

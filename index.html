@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoomy</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <SCRIPT language="JavaScript">
+    const password = prompt('Enter Password',' ');
+    fetch(`https://zoomy.jimmyganteng.com/password?password=${password}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data) {
+          window.location = "http://google.com"
+        }
+      });
+  </SCRIPT>
+</head>
+<body>
+  <div class="main">
+    <div class="row">
+      <div class="row">
+        <h1>Z o o m y</h1>
+        <p id="server">Server is offline.</p>
+      </div>
+      <div class="row">
+        <div class="arrow-up" onclick="move('up')"></div>
+      </div>
+      <div class="middle">
+        <div class="arrow-left" onclick="move('left')"></div>
+        <div class="row">
+          <h3>Sensitivity</h3>
+          <input type="range" min="1" max="10" value="5" class="slider" id="sensitivity" onchange="updateSensitivity(this.value)" on>
+          <h3 id="value">5</h3>
+        </div>
+        <div class="arrow-right" onclick="move('right')"></div>
+      </div>
+      <div class="row">
+        <div class="arrow-down" onclick="move('down')"></div>
+      </div>
+    </div>
+    <div class="row">
+      <h1>Say Something:</h1>
+      <input type="text" id="speak" maxlength="100"/>
+      <div class="speak" onclick="speak()">Say It!</div>
+    </div> 
+  </div>
+</body>
+</html>
