@@ -15,7 +15,7 @@ const updateSensitivity = (value) => {
 };
 
 const checkServer = async () => {
-  fetch(`${url}password?password=${password}`)
+  fetch(url)
     .then(response => response.json())
     .then(data => {
       if (data.error) {
